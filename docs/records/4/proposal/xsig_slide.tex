@@ -1,0 +1,272 @@
+
+
+
+\documentclass[12pt,dvipdfmx]{beamer}
+\usepackage{graphicx}
+\DeclareGraphicsExtensions{.pdf}
+\DeclareGraphicsExtensions{.eps}
+\graphicspath{{out/}{out/tex/}{out/tex/gpl/}{out/tex/svg/}{out/tex/dot/}}
+% \graphicspath{{out/}{out/tex/}{out/pdf/}{out/eps/}{out/tex/gpl/}{out/tex/svg/}{out/pdf/dot/}{out/pdf/gpl/}{out/pdf/img/}{out/pdf/odg/}{out/pdf/svg/}{out/eps/dot/}{out/eps/gpl/}{out/eps/img/}{out/eps/odg/}{out/eps/svg/}}
+\usepackage{listings}
+\usepackage{fancybox}
+\usepackage{hyperref}
+\usepackage{color}
+
+\newcommand{\confname}{{xSIG}}
+\newcommand{\firstconfdate}{\ao{2017年5月}}
+\newcommand{\firstconfplace}{\ao{東京近郊}}
+\newcommand{\firstdeadline}{\ao{2017年1月}}
+\newcommand{\firstgeneralchair}{\ao{田浦(東大)}}
+\newcommand{\firstprogramchair}{\ao{五島(NII)}}
+\newcommand{\sizeoc}{\ao{○○}}
+\newcommand{\sizepc}{\ao{○○}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% themes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usetheme{Szeged} 
+%% no navigation bar
+% default boxes Bergen Boadilla Madrid Pittsburgh Rochester
+%% tree-like navigation bar
+% Antibes JuanLesPins Montpellier
+%% toc sidebar
+% Berkeley PaloAlto Goettingen Marburg Hannover Berlin Ilmenau Dresden Darmstadt Frankfurt Singapore Szeged
+%% Section and Subsection Tables
+% Copenhagen Luebeck Malmoe Warsaw
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% innerthemes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \useinnertheme{circles}	% default circles rectangles rounded inmargin
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% outerthemes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% outertheme
+% \useoutertheme{default}	% default infolines miniframes smoothbars sidebar sprit shadow tree smoothtree
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% colorthemes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usecolortheme{seahorse}
+%% special purpose
+% default structure sidebartab 
+%% complete 
+% albatross beetle crane dove fly seagull 
+%% inner
+% lily orchid rose
+%% outer
+% whale seahorse dolphin
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% fontthemes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usefonttheme{serif}  
+% default professionalfonts serif structurebold structureitalicserif structuresmallcapsserif
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% generally useful beamer settings
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+\AtBeginDvi{\special{pdf:tounicode EUC-UCS2}}
+% do not show navigation
+\setbeamertemplate{navigation symbols}{}
+% show page numbers
+\setbeamertemplate{footline}[frame number]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% define some colors for convenience
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\mido}[1]{{\color{green}#1}}
+\newcommand{\mura}[1]{{\color{purple}#1}}
+\newcommand{\ore}[1]{{\color{orange}#1}}
+\newcommand{\ao}[1]{{\color{blue}#1}}
+\newcommand{\aka}[1]{{\color{red}#1}}
+
+\setbeamercolor{ex}{bg=cyan!20!white}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% how to typset code
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\lstset{language = C,
+numbers = left,
+numberstyle = {\tiny \emph},
+numbersep = 10pt,
+breaklines = true,
+breakindent = 40pt,
+frame = tlRB,
+frameround = ffft,
+framesep = 3pt,
+rulesep = 1pt,
+rulecolor = {\color{blue}},
+rulesepcolor = {\color{blue}},
+flexiblecolumns = true,
+keepspaces = true,
+basicstyle = \ttfamily\scriptsize,
+identifierstyle = ,
+commentstyle = ,
+stringstyle = ,
+showstringspaces = false,
+tabsize = 4,
+escapechar=\@,
+}
+
+\title{新規ワークショップ \\
+\confname の提案と参加のお願い}
+\institute{}
+\author{研究分野間の新たな連携に関する検討会 \\
+(通称: 考える会)}
+\date{}
+
+\AtBeginSection[]
+{
+\begin{frame}
+\frametitle{Contents}
+\tableofcontents[currentsection]
+\end{frame}
+}
+
+\iffalse
+\AtBeginSubsection[]
+{
+\begin{frame}
+\frametitle{Contents}
+\tableofcontents[currentsection,currentsubsection]
+\end{frame}
+}
+\fi
+
+\begin{document}
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{frame}
+\frametitle{名称\confname のこころ}
+\begin{itemize}
+\item xSIG: \emph{\ao{cross}}-disciplinary workshop on computing \ao{S}ystems, \ao{I}nfrastructures, and programmin\ao{G} 
+\item コンピュータ,システム,基盤,プログラミングに関する分野横断的ワークショップ
+\item と同時に, 複数の SIG (研究会) の連携であることを表したい
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{frame}
+\frametitle{コンセプト}
+\begin{itemize}
+\item \confname 経由で\ao{国際会議への投稿を妨げない}設計 (ACSI同様)
+\item \ao{エントリレベル}含めた若い学生の発表を促進．
+その上で，査読，研究会横断など研究会にはない付加価値をつける
+\item $\Rightarrow$ ACSI のように英語限定とはせず，
+  \begin{itemize}
+  \item 国際学会への再投稿を考えている人
+  \item エントリとして利用したい人
+  \end{itemize}
+\ao{両方にメリット}のある設計
+\end{itemize}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{frame}
+\frametitle{立て付け}
+\begin{itemize}
+\item 名称: \confname
+\item 第一回開催時期: \firstconfdate 
+\item 第一回開催場所: \firstconfplace 2-3日
+\item 第一回論文募集締め切り時期: \firstdeadline ?
+\item 第一回general chair: \firstgeneralchair
+\item 第一回program chair: \firstprogramchair
+\item 論文形式: \ao{査読あり, 予稿集発行せず}
+\item 採否決定形式: \ao{ACSIなみ (EasyChair + F2F)?}
+\item 論文・発表言語: \ao{日英両方}
+\item 学会誌との連携的な話: \ao{しない?}
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{frame}
+\frametitle{魅力向上策(検討中)}
+\begin{itemize}
+\item 一部の有望論文に\ao{メンター}をつけ，国際学会への投稿推奨
+\item 一定数, \ao{学生枠, 修士以下枠, 学部生枠}をもうけ，学生の投稿を推奨
+\item 最優秀論文賞的な賞の他に, \ao{奨励賞を多数，色々な尺度}で出す
+（アイデア，実装の努力や完成度，説明が素晴らしい，英語が素晴らしい，etc.）
+\item (少なくとも初年度は)学生の参加を無料とする.
+または,遠隔からの発表者に旅費援助 ?
+\item \ao{ArXiv}との連携? 登録済みの英語論文を無条件に発表許可?
+\item 卒論，修論\ao{丸投げ}制度?
+\end{itemize}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{frame}
+\frametitle{魅力向上策(検討中)}
+\begin{itemize}
+\item \ao{チュートリアル的}な,広い聴衆向けに基礎を紹介する系のプロ
+グラムを充実させる,ないし気楽に多数実行
+\begin{itemize}
+\item やってほしいチュートリアルの\ao{募集}
+\item \ao{成果ソフトウェアのハンズオン}チュートリアル的なもの 
+  (AICS のソフトウェアなど )
+\end{itemize}
+\item いわゆる論文ではなく,他の研究者に貢献する
+\ao{プログラムコードやデータ}の公開を目的とした発表など, 多様な発表・貢献形態
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{frame}
+\frametitle{目指すところ}
+研究会ごとの細分化ではなく
+基盤，システム系分野が一同に介して交流できる学会を目指しています
+
+
+{\huge よろしくおねがいします}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{frame}
+\frametitle{HPCSとの開催時期の重複に関して}
+\begin{itemize}
+\item 過去にACSIのために動いてもらったという経緯も有り，心苦しい
+\item 本当に開催時期が重なっているのは避けるというのが大前提
+\item 「両方参加可能」を保てばお互いの客の入りに深刻な影響はないと期待
+\item HPCSの前後に東京で，というのはありではないか
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{frame}
+\frametitle{考える会「国際会議化」に関しての議論}
+
+\begin{itemize}
+\item 初回，色々な立場の人にポジショントークをしてもらい，
+  中にはもちろんフル国際会議化を推す意見もあった
+\item アンケートでも，フル国際会議化という意見は多い
+\item 一方，フル国際会議は，
+  \begin{itemize}
+  \item 分野が広いほど，「需要の明確化」「立ち位置の確保」が難しくなり，
+    成功の青写真が描きにくくなる
+  \item 各分野，トップ会議のラインアップは確立されており，
+    かつすでに過密気味
+  \end{itemize}
+\item ここでの第一義的な目的は，
+  日本の「システム〜高性能応用」研究を縮小させないため，
+  次の世代を盛り上げるための，分野間連携
+\item フル国際会議はもう少し絞った分野で，分野関連系はエントリ重視で，
+  というすみ分け
+\end{itemize}
+\end{frame}
+
+
+\end{document}
+
+
+
