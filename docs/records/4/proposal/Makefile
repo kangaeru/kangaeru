@@ -12,7 +12,7 @@ bibtex := bibtex
 run_bibtex_and_latex_twice:=n
 
 # tex files
-tex := $(wildcard *.tex)
+tex := $(wildcard xsig_slide.tex)
 # svg files
 svg_svg := $(wildcard svg/*.svg)
 # animation svg files
